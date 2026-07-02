@@ -2,7 +2,6 @@
 
 A quick reference for custom Neovim keybindings.
 
----
 
 # Table of Contents
 
