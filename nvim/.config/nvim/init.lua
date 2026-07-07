@@ -16,13 +16,21 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require('lazy').setup({
-  require ("plugins.neotree"),
-  require ("plugins.colortheme"),
-  require ("plugins.bufferline"),
-  require ("plugins.lualine"),
-})
+require('lazy').setup {
+  require 'plugins.neotree',
+  require 'plugins.colortheme',
+  require 'plugins.bufferline',
+  require 'plugins.lualine',
+  require 'plugins.treesitter',
+  require 'plugins.telescope',
+  require 'plugins.lsp',
+  require 'plugins.autocompletion',
+  require 'plugins.autoformatting',
+  require 'plugins.gitsings',
+  require 'plugins.alpha',
+  require 'plugins.misc',
+}
 
-vim.cmd.colorscheme("tokyonight")
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.cmd.colorscheme 'tokyonight'
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
