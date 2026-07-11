@@ -6,14 +6,17 @@ return {
   },
 
   config = function()
-    local ts_language = vim.treesitter and vim.treesitter.language
-    if ts_language and ts_language.ft_to_lang == nil and type(ts_language.get_lang) == "function" then
-      ts_language.ft_to_lang = ts_language.get_lang
-    end
-
     local telescope = require("telescope")
 
-    telescope.setup({})
+    telescope.setup({
+      defaults = {
+        preview = {
+          treesitter = {
+            enable = false,
+          },
+        },
+      },
+    })
 
     local builtin = require("telescope.builtin")
     local keymap = vim.keymap

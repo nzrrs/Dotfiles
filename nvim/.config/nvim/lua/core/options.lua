@@ -1,4 +1,4 @@
-vim.g.have_nerd_font = false -- Set to true to use Nerd Font
+vim.g.have_nerd_font = true -- Set to true to use Nerd Font
 vim.o.hlsearch = false -- Set highlight on search
 vim.wo.number = true -- Make line numbers default
 vim.o.mouse = 'a' -- Enable mouse mode
