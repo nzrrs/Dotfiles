@@ -17,3 +17,5 @@ auto-update-channel = stable
 window-width = 122 
 window-height = 34
 title = "<3"
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12 
