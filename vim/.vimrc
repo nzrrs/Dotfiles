@@ -1,3 +1,30 @@
+# ========================================
+# Vim-plug Installation
+# ========================================
+
+# 1. Create the autoload directory
+# mkdir -p ~/.vim/autoload
+
+# 2. Download vim-plug (choose one)
+
+# Using curl:
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+# https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Using wget:
+# wget -O ~/.vim/autoload/plug.vim \
+# https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# 3. Open Vim
+# vim
+
+# 4. Install the plugins
+# :PlugInstall
+
+# 5. Restart Vim
+
+
+
 " ========================================
 " Options
 " ========================================
