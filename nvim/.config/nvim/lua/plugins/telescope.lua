@@ -54,6 +54,35 @@ return {
 		keymap.set("n", "<leader>fs", builtin.current_buffer_fuzzy_find, { desc = "Search Current Buffer" })
 		keymap.set("n", "<leader>fw", with_cwd(builtin.grep_string), { desc = "Word Under Cursor" })
 		keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Diagnostics" })
-		keymap.set("n", "<leader>ut", builtin.colorscheme, { desc = "Colorschemes" })
+		keymap.set("n", "<leader>ut", function()
+			builtin.colorscheme({
+				enable_preview = true,
+				attach_mappings = function(prompt_bufnr)
+					local actions = require("telescope.actions")
+					local action_state = require("telescope.actions.state")
+
+					actions.select_default:replace(function()
+						local selection = action_state.get_selected_entry()
+						actions.close(prompt_bufnr)
+
+						local theme = selection.value
+
+						vim.cmd.colorscheme(theme)
+						vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+						vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
+						local path = vim.fn.stdpath("config") .. "/lua/theme.lua"
+						local file = io.open(path, "w")
+
+						if file then
+							file:write(string.format('return {\n\tcurrent = "%s",\n}\n', theme))
+							file:close()
+						end
+					end)
+
+					return true
+				end,
+			})
+		end, { desc = "Choose Colorscheme" })
 	end,
 }
