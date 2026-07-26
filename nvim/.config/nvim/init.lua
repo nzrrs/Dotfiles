@@ -27,7 +27,7 @@ require('lazy').setup {
   require 'plugins.lsp',
   require 'plugins.autocompletion',
   require 'plugins.autoformatting',
-  require("plugins.indent-blankline"),
+  require 'plugins.indent-blankline',
   require 'plugins.gitsings',
   require 'plugins.alpha',
   require 'plugins.misc',

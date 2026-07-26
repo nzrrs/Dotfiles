@@ -24,6 +24,7 @@ return {
 		})
 
 		local builtin = require("telescope.builtin")
+		local theme_utils = require("core.theme_utils")
 		local keymap = vim.keymap
 		local uv = vim.uv or vim.loop
 
@@ -63,21 +64,14 @@ return {
 
 					actions.select_default:replace(function()
 						local selection = action_state.get_selected_entry()
+						if not selection or not selection.value then
+							return
+						end
+
 						actions.close(prompt_bufnr)
 
 						local theme = selection.value
-
-						vim.cmd.colorscheme(theme)
-						vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-						vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-
-						local path = vim.fn.stdpath("config") .. "/lua/theme.lua"
-						local file = io.open(path, "w")
-
-						if file then
-							file:write(string.format('return {\n\tcurrent = "%s",\n}\n', theme))
-							file:close()
-						end
+						theme_utils.apply_and_persist(theme)
 					end)
 
 					return true
