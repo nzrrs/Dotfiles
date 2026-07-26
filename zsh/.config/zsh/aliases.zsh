@@ -10,7 +10,7 @@ alias mini='~/mini-moulinette/mini-moul.sh'
 #system
 alias shutdown='sudo shutdown now'
 alias reboot='sudo reboot'
-alias sleep='sudo pm-suspend'
+alias sleep='systemctl suspend'
 alias logout='gnome-session-quit --logout'
 
 # git
