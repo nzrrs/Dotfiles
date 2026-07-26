@@ -1,59 +1,33 @@
-# ===========================
-# Shell
-# ===========================
+# Theme
+theme = TokyoNight Storm
+background = #282c35
 
-# Start (or attach to) the main tmux session.
-command = tmux new-session -A -s main
+# Font
+font-size = 12.5
+font-thicken = true
+font-thicken-strength = 0
 
-working-directory = inherit
+# Cursor
+cursor-style = bar
+cursor-style-blink = true
+cursor-color = #A3BE8C
+mouse-hide-while-typing = true
 
-shell-integration-features = cursor,sudo,title,no-ssh-env,no-ssh-terminfo,path
+# Shell / tmux
+# Auto-attach to an existing tmux session on launch, or create a new one if none exists.
+command = zsh --login -c "if command -v tmux >/dev/null 2>&1; then tmux attach || tmux; else zsh; fi"
 
-# ===========================
-# Appearance
-# ===========================
+# Window
+macos-titlebar-style = hidden
+window-save-state = always
+maximize = true
+confirm-close-surface = false
+quick-terminal-position = center
 
-theme = TokyoNight
+# Padding (left, right, top, bottom → x/y in Ghostty)
+window-padding-x = 4,0
+window-padding-y = 2,0
 
-font-family = "JetBrainsMono Nerd Font"
-font-size = 12
-
-background-opacity = 0.82
-
-cursor-text = #FFFFFF
-cursor-opacity = 0.75
-
-window-padding-x = 0
-window-padding-y = 0
-
-# Remove title bar and window decorations.
-window-decoration = false
-
-# Hide Ghostty tabs (tmux handles windows).
-gtk-tabs-location = hidden
-
-# Initial window size (columns × rows).
-window-width = 122
-window-height = 34
-
-# ===========================
-# Terminal
-# ===========================
-
-scrollback-limit = 33554432
-
-clipboard-read = allow
-copy-on-select = true
-
-click-repeat-interval = 500
-
-gtk-single-instance = true
-
-auto-update-channel = stable
-
-# ===========================
-# Keybinds
-# ===========================
-
-# Open workspace.
-keybind = ctrl+l=text:cd ~/Desktop/Workspace; ls\n
+# Keybinds (Ctrl+Enter / Shift+Enter CSI u sequences)
+keybind = ctrl+enter=text:\x1b[13;5u
+keybind = shift+enter=text:\x1b[13;2u
