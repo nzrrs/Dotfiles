@@ -1,8 +1,9 @@
 # Dotfiles Shortcuts Cheat Sheet
 
-Quick reference for all custom keybindings & aliases across tools :).
+Quick reference for all custom keybindings & aliases across tools.
 
----
+<img width="7858" height="4773" alt="image" src="https://github.com/user-attachments/assets/29ff5269-a18a-4b26-8bd4-c13a88ce8e69" />
+
 
 ## Table of Contents
 
