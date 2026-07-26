@@ -10,7 +10,7 @@ ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 source $ZSH/oh-my-zsh.sh
 
-source ~/aliases.zsh
-source ~/custom.zsh
+source ~/.config/zsh/aliases.zsh
+source ~/.config/zsh/custom.zsh
 
 eval "$(starship init zsh)"
