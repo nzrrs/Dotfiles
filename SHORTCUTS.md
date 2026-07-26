@@ -5,6 +5,7 @@ Quick reference for all custom keybindings & aliases across tools :).
 ---
 
 ## Table of Contents
+
 - [Tmux](#tmux)
 - [Zsh](#zsh)
 - [Neovim](#neovim)
@@ -381,7 +382,7 @@ Quick reference for all custom keybindings & aliases across tools :).
 
 # Yazi
 
-*Default keybindings — update this section if you customize `yazi.toml` / `keymap.toml`.*
+Config now lives in Dotfiles at `yazi/.config/yazi/` (yazi.toml, keymap.toml, theme.toml — official shipped defaults, unmodified). Update this table if you customize `keymap.toml`.
 
 | Key | Action |
 |------|--------|
@@ -392,12 +393,20 @@ Quick reference for all custom keybindings & aliases across tools :).
 | `Space` | Toggle selection |
 | `v` | Enter visual mode (select range) |
 | `y` | Yank (copy) |
-| `x` | Cut |
+| `x` | Yank (cut) |
 | `p` | Paste |
-| `d` | Delete (trash) |
-| `a` | Create file/directory |
+| `P` | Paste (overwrite) |
+| `d` | Trash selected files |
+| `D` | Permanently delete |
+| `a` | Create file (end with `/` for directory) |
 | `r` | Rename |
+| `-` | Symlink (absolute path) |
+| `_` | Symlink (relative path) |
+| `o` | Open selected files |
+| `O` | Open interactively |
+| `;` | Run shell command (interactive) |
 | `/` | Search |
 | `q` | Quit |
-| `Tab` | Toggle preview pane |
+| `Q` | Quit without cwd-file |
+| `Tab` | Spot hovered file |
 | `.` | Toggle hidden files |
