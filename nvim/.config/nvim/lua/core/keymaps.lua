@@ -14,6 +14,11 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
+-- Yazi integration
+vim.keymap.set('n', '<leader>ya', '<cmd>Yazi<CR>', {
+  desc = 'Open Yazi',
+})
+
 -- clear highlights
 vim.keymap.set('n', '<Esc>', ':noh<CR>', opts)
 
@@ -72,7 +77,7 @@ vim.keymap.set('n', '<leader>tx', ':tabclose<CR>', opts) -- close current tab
 vim.keymap.set('n', '<leader>tn', ':tabn<CR>', opts) --  go to next tab
 vim.keymap.set('n', '<leader>tp', ':tabp<CR>', opts) --  go to previous tab
 
--- Toogle buffer pin 
+-- Toogle buffer pin
 vim.keymap.set('n', '<leader>bp', '<cmd>BufferLineTogglePin<CR>', opts)
 
 -- Toggle line wrapping

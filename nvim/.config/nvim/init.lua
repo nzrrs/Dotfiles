@@ -31,4 +31,5 @@ require('lazy').setup {
   require 'plugins.gitsings',
   require 'plugins.alpha',
   require 'plugins.misc',
+  require 'plugins.yazi',
 }
