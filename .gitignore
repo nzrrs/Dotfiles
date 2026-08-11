@@ -1,2 +1,3 @@
 # Stow
 .stowrc
+*.dotfiles-backup-*
