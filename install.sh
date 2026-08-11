@@ -566,13 +566,33 @@ write_manifest() {
     printf 'dir\t%s\n' "$dir" >>"$MANIFEST_PATH"
   done
 }
-
+print_banner()
+{
+echo "                                                                            ";
+echo "                                                                            ";
+echo "  .=*8888n..\"%888:     .x~~\"*Weu.     :~\"8888x :\"%888x      .x888888hx    : ";
+echo " X    ?8888f '8888    d8Nu.  9888c   8    8888Xf  8888>    d88888888888hxx  ";
+echo " 88x. '8888X  8888>   88888  98888  X88x. ?8888k  8888X   8\" ... \`\"*8888%\`  ";
+echo "'8888k 8888X  '\"*8h.  \"***\"  9888%  '8888L'8888X  '%88X  !  \"   \` .xnxx.    ";
+echo " \"8888 X888X .xH8          ..@8*\"    \"888X 8888X:xnHH(\`\` X X   .H8888888%:  ";
+echo "   \`8\" X888!:888X       \`\`\`\`\"8Weu      ?8~ 8888X X8888   X 'hn8888888*\"   > ";
+echo "  =~\`  X888 X888X      ..    ?8888L  -~\`   8888> X8888   X: \`*88888%\`     ! ";
+echo "   :h. X8*\` !888X    :@88N   '8888N  :H8x  8888  X8888   '8h.. \`\`     ..x8> ";
+echo "  X888xX\"   '8888..: *8888~  '8888F  8888> 888~  X8888    \`88888888888888f  ";
+echo ":~\`888f     '*888*\"  '*8\"\`   9888%   48\"\` '8*~   \`8888!\`   '%8888888888*\"   ";
+echo "    \"\"        \`\"\`      \`~===*%\"\`      ^-==\"\"      \`\"\"         ^\"****\"\"\`     ";
+echo "                                                                            ";
+echo "                                                                            ";
+echo "                                                                            ";
+}
 main() {
   if [[ ! -d "$REPO_ROOT" ]]; then
     print_error "Unable to detect repository root."
     exit 1
   fi
-
+  
+  print_banner
+  
   printf 'Dotfiles Installation\n'
   set_progress_percent 0 "Detecting repository"
 
