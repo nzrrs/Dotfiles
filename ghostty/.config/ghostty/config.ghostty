@@ -1,26 +1,34 @@
+```ini
 # Theme
-theme = TokyoNight Storm
-background = #1a1b26
-background-opacity = 0.80
+
+theme = dark
+background = #121212
+background-opacity = 0.88
 background-blur-radius = 20
 
 # Font
+
 font-family = "JetBrainsMono Nerd Font"
 font-size = 12.5
 font-thicken = true
 font-thicken-strength = 0
 
 # Cursor
+
 cursor-style = bar
 cursor-style-blink = true
-cursor-color = #7aa2f7
+cursor-color = #d0d0d0
 mouse-hide-while-typing = true
 
 # Shell / tmux
-# Auto-attach to an existing tmux session on launch, or create a new one if none exists.
+
+# Auto-attach to an existing tmux session on launch,
+# or create a new one if none exists.
+
 command = zsh --login -c "if command -v tmux >/dev/null 2>&1; then tmux attach || tmux; else zsh; fi"
 
 # Window
+
 window-decoration = false
 window-save-state = always
 window-width = 180
@@ -29,7 +37,8 @@ maximize = true
 confirm-close-surface = false
 quick-terminal-position = center
 
-# Padding (left, right, top, bottom → x/y in Ghostty)
+# Padding
+
 window-padding-x = 4,0
 window-padding-y = 2,0
-
+```
