@@ -1,14 +1,13 @@
-```ini
+```text
 # Theme
 
-theme = dark
 background = #121212
 background-opacity = 0.88
 background-blur-radius = 20
 
 # Font
 
-font-family = "JetBrainsMono Nerd Font"
+font-family = JetBrainsMono Nerd Font
 font-size = 12.5
 font-thicken = true
 font-thicken-strength = 0
