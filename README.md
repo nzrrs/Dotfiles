@@ -18,4 +18,35 @@ My config files for maintaining a consistent dev environment across machines.
 - **Dotfiles Manager**: [GNU Stow](https://www.gnu.org/software/stow/)
 
 ## Setup
-Lmakina jaya
+
+Clone the repository:
+
+```bash
+git clone <your-repository-url>
+cd Dotfiles
+```
+
+Run the installer from the repo root and follow the on-screen prompts:
+
+```bash
+./install.sh
+```
+
+The installer checks dependencies, detects conflicts, and sets up the dotfiles using GNU Stow or normal symlinks.
+
+> [!NOTE]
+   The installer never modifies the files inside the repository. Any required backups are stored outside the repository.
+
+## Uninstalling
+
+To remove the dotfiles installed by the script:
+
+```bash
+./uninstall.sh
+```
+
+The uninstaller removes the symlinks created by the installation and preserves the original files in the repository.
+
+> [!IMPORTANT]
+> - Uninstalling never deletes or modifies files inside the repository.
+> - Run the installer from the repository root and follow the prompts before manually changing any symlinks.
