@@ -12,6 +12,7 @@ alias shutdown='sudo shutdown now'
 alias reboot='sudo reboot'
 alias sleep='systemctl suspend'
 alias logout='gnome-session-quit --logout'
+alias cls='clear'
 
 
 #Compiler 
