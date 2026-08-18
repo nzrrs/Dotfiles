@@ -13,11 +13,11 @@ alias reboot='sudo reboot'
 alias sleep='systemctl suspend'
 alias logout='gnome-session-quit --logout'
 alias cls='clear'
+alias reload='source ~/.zshrc'
 
 
 #Compiler 
 alias gccW='gcc -Wall -Wextra -Wall'
-alias gccS='gcc -Wall -Wextra -Wall -fsanitize=address'
 
 # git
 alias gs='git status'
