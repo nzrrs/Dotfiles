@@ -5,6 +5,13 @@ nvm() {
   nvm "$@"
 }
 
+# git lazy function 
+gfast() {
+    git add . &&
+    git commit -m "Lazy to type an commit msg" &&
+    git push
+}
+
 # envman
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
