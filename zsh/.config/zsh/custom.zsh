@@ -12,6 +12,21 @@ gfast() {
     git push
 }
 
+# Google search
+google() {
+    google-chrome "https://www.google.com/search?q=${(j:+:)@}" &
+}
+
+# GitHub repository search
+gh() {
+    google-chrome "https://github.com/search?q=${(j:+:)@}&type=repositories" &
+}
+
+# YouTube search
+yt() {
+    google-chrome "https://www.youtube.com/results?search_query=${(j:+:)@}" &
+}
+
 # envman
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 

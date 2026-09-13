@@ -29,6 +29,15 @@ return {
           args = { '$FILENAME' },
           stdin = false,
         },
+        php_cs_fixer = {
+          command = 'php-cs-fixer',
+          args = {
+            'fix',
+            '--rules=@PSR12,no_unused_imports,ordered_imports,{"array_syntax":{"syntax":"short"}},not_operator_with_successor_space',
+            '$FILENAME',
+          },
+          stdin = false,
+        },
       },
       formatters_by_ft = {
         c = { 'c_formatter_42' },

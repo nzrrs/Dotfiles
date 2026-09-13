@@ -14,3 +14,5 @@ source ~/.config/zsh/aliases.zsh
 source ~/.config/zsh/custom.zsh
 
 eval "$(starship init zsh)"
+
+export PATH=$PATH:/home/nzr/.spicetify
