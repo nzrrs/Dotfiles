@@ -20,7 +20,7 @@ return {
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
         else
-          return { timeout_ms = 500, lsp_format = 'fallback' }
+          return { timeout_ms = 300, lsp_format = 'fallback' }
         end
       end,
       formatters = {
@@ -33,7 +33,8 @@ return {
           command = 'php-cs-fixer',
           args = {
             'fix',
-            '--rules=@PSR12,no_unused_imports,ordered_imports,{"array_syntax":{"syntax":"short"}},not_operator_with_successor_space',
+            '--using-cache=no',
+            '--rules={"@PSR12":true,"no_unused_imports":true,"ordered_imports":true,"array_syntax":{"syntax":"short"},"not_operator_with_successor_space":true}',
             '$FILENAME',
           },
           stdin = false,
