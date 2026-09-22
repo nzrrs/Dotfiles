@@ -29,16 +29,11 @@ return {
           args = { '$FILENAME' },
           stdin = false,
         },
-        php_cs_fixer = {
-          command = 'php-cs-fixer',
-          args = {
-            'fix',
-            '--using-cache=no',
-            '--rules={"@PSR12":true,"no_unused_imports":true,"ordered_imports":true,"array_syntax":{"syntax":"short"},"not_operator_with_successor_space":true}',
-            '$FILENAME',
-          },
-          stdin = false,
-        },
+      },
+      php_cs_fixer = {
+        command = 'php-cs-fixer',
+        args = { 'fix', '$FILENAME' },
+        stdin = false,
       },
       formatters_by_ft = {
         c = { 'c_formatter_42' },
