@@ -43,4 +43,5 @@ source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 
 # startup banner
-fastfetch
+fetch -l nixos --shading-chars sextans --infinite
+

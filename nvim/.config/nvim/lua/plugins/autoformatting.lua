@@ -38,6 +38,7 @@ return {
       formatters_by_ft = {
         c = { 'c_formatter_42' },
         cpp = { 'c_formatter_42' },
+        h = { 'c_formatter_42' },
         lua = { 'stylua' },
         python = { 'ruff_format' },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
