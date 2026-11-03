@@ -34,4 +34,5 @@ require('lazy').setup {
   require 'plugins.yazi',
   require 'plugins.diffview',
   require 'plugins.42header',
+  require 'plugins.terminal',
 }

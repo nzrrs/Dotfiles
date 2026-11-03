@@ -45,3 +45,6 @@ alias lt="eza --tree --icons=always"
 
 # zoxide
 alias cd='z'
+
+#cclean
+alias cclean='~/Cleaner_42/LinuxCleaner_42.sh'

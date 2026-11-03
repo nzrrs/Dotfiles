@@ -1,4 +1,8 @@
 vim.g.have_nerd_font = true -- Set to true to use Nerd Font
+-- 1337 header config global
+vim.g.user = 'nsadiki'
+vim.g.mail = 'nsadiki@student.1337.ma'
+--------------------------------------
 vim.o.hlsearch = false -- Set highlight on search
 vim.wo.number = true -- Make line numbers default
 vim.o.mouse = 'a' -- Enable mouse mode
