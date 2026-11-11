@@ -35,4 +35,6 @@ require('lazy').setup {
   require 'plugins.diffview',
   require 'plugins.42header',
   require 'plugins.terminal',
+  require 'plugins.42lines',
+  require 'plugins.Markdown',
 }
