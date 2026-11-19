@@ -14,6 +14,7 @@ alias sleep='systemctl suspend'
 alias logout='gnome-session-quit --logout'
 alias cls='clear'
 alias reload='source ~/.zshrc'
+alias clean='cleanmate'
 
 
 #Compiler 

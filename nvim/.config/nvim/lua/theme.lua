@@ -1,3 +1,3 @@
 return {
-	current = "tokyonight-night",
+	current = "kanagawa-dragon",
 }
