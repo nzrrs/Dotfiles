@@ -43,6 +43,7 @@ alias gds='git diff --staged'
 alias ls="eza --all --icons=always"
 alias ll="eza -la --icons=always"
 alias lt="eza --tree --icons=always"
+alias lc="eza --code"
 
 # zoxide
 alias cd='z'
